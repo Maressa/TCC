@@ -1,0 +1,20 @@
+<div ng-class="errorClass" role="alert" ng-if="error">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span ng-bind="errorMessage"></span>
+</div>
+<form class="col-md-12 p-b-20 text-right">
+	<div class="form-group">
+		<div class="p-l-0 col-md-10">
+			<input type="file" id="jsonFile" class="form-control">
+		</div>
+		<div class="col-md-2">
+			<button ng-click="readFile()" class="btn btn-primary">Upload Json</button>
+		</div>
+	</div>
+</form>
+<form class="col-md-12">
+	<div class="form-group">
+		<textarea ng-model="jsonFromInput" type="text" class="form-control" rows="20" autofocus="true"></textarea>
+	</div>
+	<button ng-click="setJson()" class="btn btn-primary">Submit Json</button>	
+</form>	

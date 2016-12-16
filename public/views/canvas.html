@@ -1,0 +1,26 @@
+<div class="alert alert-info" role="alert" ng-if="canClick">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span ng-bind="infoMessage"></span>
+</div>
+<div class="col-md-12 canvasButton">
+	<div class="col-md-7 canvasButton">
+		<button class="btn btn-default" ng-click="drawCanvas()">Click here to plot the pixels.</button>	
+	</div>
+	<div class="col-md-5 text-right">
+		<label for="zoom" class="control-label col-md-10 p-r-0">Zoom value: </label>
+    	<div class="col-md-2 p-r-0">
+      		<input ng-model="zoomValue" type="number" class="form-control" id="zoom">
+    	</div>
+	</div>
+</div>
+<div class="col-md-11">	
+	<div class="col-md-4 divCentral" ng-repeat="canvas in headers track by $index" id="{{setDivId($index)}}" ng-click="sortCanvas($index)">
+		<p id="{{setParagraphId($index)}}" ng-bind="headers[$index]"></p>
+		<canvas class="canvas" id="{{setCanvasId($index)}}"></canvas>
+	</div>
+</div>
+<div class="col-md-1 text-center">
+	<p ng-bind="canvasScaleMaxValue"></p>
+	<canvas class="canvasScale" id="canvasScale" width="50" height="500"></canvas>
+	<p ng-bind="canvasScaleMinValue"><p>
+</div>

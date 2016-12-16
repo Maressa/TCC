@@ -1,0 +1,38 @@
+body { padding-top:30px; }
+
+.divCentral{
+	min-height: 170px;
+}
+
+.divCentral:hover{
+	cursor:pointer;
+}
+.canvas{
+	width: 300px;
+	height: 300px;
+	border: 1px solid #e7e7e7;
+	background-color: #f8f8f8;
+	border-radius: 4px;
+}
+
+.canvasButton{
+	padding-bottom: 20px;
+}
+
+.canvasScale{
+	border: 1px solid #e7e7e7;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+}
+
+.p-r-0{
+	padding-right: 0px;
+}
+
+.p-b-20{
+	padding-bottom: 20px;
+}
+
+.p-l-0{
+	padding-left: 0px;
+}
